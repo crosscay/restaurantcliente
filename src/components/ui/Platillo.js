@@ -23,7 +23,7 @@ const Platillo = ({platillo}) => {
                     existencia
                 });
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     }
 
