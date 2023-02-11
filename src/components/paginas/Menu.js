@@ -12,9 +12,10 @@ const Menu = () => {
     const { firebase } = useContext(FirebaseContext);
 
     // consultar la base de datos al cargar
+    
     useEffect(() => {
         const obtenerPlatillos = () => {
-            const resultado = firebase.db.collection('productos').onSnapshot(manejarSnapshot);
+            firebase.db.collection('productos').onSnapshot(manejarSnapshot);
             
         }
         obtenerPlatillos();
@@ -31,7 +32,7 @@ const Menu = () => {
 
         // almacenar los resultados en el state
         guadarPlatillos(platillos);
-        console.log(platillos)
+        // console.log(platillos)
     }
 
     return ( 
